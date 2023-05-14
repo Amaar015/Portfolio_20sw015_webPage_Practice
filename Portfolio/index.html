@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
     <!-- simple css file -->
     <link rel="stylesheet" href="style.css">
@@ -17,23 +18,113 @@
 </head>
 
 <body>
-    <header class="header">
-        <a href="#home" class="logo">
-            <img src="images/logo.png" alt="">
-            <h3>AmaarRaza</h3>
+    <header>
+
+        <a href="#" class="logo">
+            <div class="image">
+                <img src="images/logo.png" alt="">
+            </div>
+            <div class="h1">Amaar<span>Raza</span></div>
         </a>
+
+        <div id="menu" class="fas fa-bars"></div>
+
         <nav class="navbar">
-            <a href="#home">Home</a>
-            <a href="#about">About Us</a>
-            <a href="#service">My Services</a>
-            <a href="#experience">Experience</a>
-            <a href="#contact">Contact Us</a>
+            <ul>
+                <li><a class="active" href="#home">home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#qualification">Qualification</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </nav>
-        <div class="icons">
-            <div class="btn">follow us</div>
-        </div>
 
     </header>
+    <section class="home" id="home">
+        <div class="content">
+            <h2>Hello... </h2>
+            <h1>I'm Amaar Hassnain</h1>
+            <p>Ground and solution-oriented Software Engineer with a wide variety of professional experience. Adept at
+                motivating self and others. Passionate about full stack development</p>
+            <button class="button">
+                <svg viewBox="0 0 16 16" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg"
+                    class="svgIcon">
+                    <path
+                        d="M8 2a5.53 5.53 0 0 0-3.594 1.342c-.766.66-1.321 1.52-1.464 2.383C1.266 6.095 0 7.555 0 9.318 0 11.366 1.708 13 3.781 13h8.906C14.502 13 16 11.57 16 9.773c0-1.636-1.242-2.969-2.834-3.194C12.923 3.999 10.69 2 8 2zm2.354 6.854-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 1 1 .708-.708L7.5 9.293V5.5a.5.5 0 0 1 1 0v3.793l1.146-1.147a.5.5 0 0 1 .708.708z">
+                    </path>
+                </svg>
+            </button>
+        </div>
+        <div class="box-container">
+            <div class="box">
+                <i class="fas fa-graduation-cap"></i>
+                <h3>Front-End Developemnt</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </div>
+            <div class="box">
+                <i class="fas fa-fire"></i>
+                <h3>Database</h3>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </div>
+            <div class="box">
+                <i class="fas fa-graduation-cap"></i>
+                <h3>Front-End Developemnt</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </div>
+        </div>
+
+        <!-- side icons -->
+        <nav class="social">
+            <ul>
+                <li><a href="#">Twitter <i class="fa fa-twitter"></i></a></li>
+                <li><a href="#">Github <i class="fa fa-github"></i></a></li>
+                <li><a href="#">Linkedin <i class="fa fa-linkedin"></i></a>
+                <li><a href="#">Facebook <i class="fa fa-facebook"></i></a>
+                <li><a href="#">Instagram <i class="fa fa-instagram"></i></a>
+                </li>
+            </ul>
+        </nav>
+    </section>
+    <section class="about" id="about">
+        <div class="box-container">
+            <div class="image">
+                <div class="images">
+                    <img src="images/about.jpg" alt="">
+                </div>
+            </div>
+            <div class="content">
+                <h3 class="heading"><span>About</span> Me</h3>
+                <h2 class="moving">I'm <span>Web Developer</span> </h2>
+                <p>Undergraduate Software engineer with a strong background in developing responsive
+                    website designs and firm believer in the moblie-first approach.
+                </p>
+                <span class="span2">Responsibilities as Software Engineer</span>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <p>Lorem ipsum dolor sit amet consectetur.</p>
+                <p>Lorem ipsum dolor sit amet</p>
+                <div class="buttons">
+                    <a href="#" class="btn">Browse Projects</a>
+                    <a href="#" class="btn">Lets Talk</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="qualification" id="qualification">
+        <h1>Hello home</h1>
+    </section>
+    <section class="skills" id="skills">
+        <h1>Hello home</h1>
+    </section>
+    <section class="portfolio" id="portfolio">
+        <h1>portfolio</h1>
+    </section>
+    <section class="contact" id="contact">
+        <h1>Hello home</h1>
+    </section>
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="script.js"></script>
