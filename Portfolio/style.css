@@ -51,7 +51,7 @@ body {
 section {
     min-height: 100vh;
     padding: 0 7%;
-    padding-top: 9rem;
+    padding-top: 4rem;
 }
 
 .btn {
@@ -393,8 +393,10 @@ header .navbar.nav-toggle {
 
 /* About Styling code */
 .about {
-    padding: 4rem 13%;
-    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--white);
 }
 
 .about .box-container {
@@ -409,12 +411,12 @@ header .navbar.nav-toggle {
 }
 
 .about .box-container .image {
-    flex: 1 1 20rem;
+    flex: 1 1 30rem;
 }
 
 .about .box-container .images {
-    width: 28rem;
-    height: 35rem;
+    width: 30rem;
+    height: 38rem;
     border: var(--border);
     border-radius: 1rem;
 
@@ -540,6 +542,21 @@ header .navbar.nav-toggle {
 
     .home::before {
         display: none;
+    }
+}
+
+@media(max-width:690px) {
+    .about {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    .about .box-container .image {
+        margin-left: 1.6rem;
+    }
+
+    .about .box-container .content {
+        margin-top: 4rem;
     }
 }
 
