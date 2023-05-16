@@ -411,8 +411,8 @@ header .navbar.nav-toggle {
     padding: 3rem 7%;
 }
 
-.about .box-container .image {
-    /* flex: 1 1 30rem; */
+/* .about .box-container .image {
+    
     position: relative;
     width: 400px;
     height: 400px;
@@ -511,6 +511,77 @@ header .navbar.nav-toggle {
 .about .box-container .images a:hover {
     background: var(--light-blue);
 
+} */
+.about .box-container .image {
+    flex: 1 1 30rem;
+    padding: 2rem 4rem;
+    /* margin-left: 10rem; */
+
+}
+
+.card {
+    width: 280px;
+    height: 320px;
+    position: sticky;
+    cursor: pointer;
+    /* margin-left: 20px; */
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    width: 30%;
+    height: 30%;
+    background: none;
+    top: 0;
+    left: 50px;
+    transform: translate(-15px, -15px);
+    border-top: 5px solid #ed7966;
+    border-left: 5px solid #ed7966;
+    z-index: -1;
+    transition: all 0.2s ease-in-out;
+}
+
+
+.card::after {
+    content: "";
+    position: absolute;
+    width: 30%;
+    height: 30%;
+    background: none;
+    bottom: 0;
+    right: -50px;
+    transform: translate(15px, 15px);
+    border-bottom: 5px solid #ed7966;
+    border-right: 5px solid #ed7966;
+    z-index: -1;
+    transition: all 0.2s ease-in-out;
+}
+
+.card:hover::after,
+.card:hover::before {
+    width: calc(100% + 30px);
+    height: calc(100% + 30px);
+}
+
+.card .image-box {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    cursor: pointer;
+    margin-left: 50px;
+}
+
+.card .image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.card:hover .image-box img {
+    transform: scale(1.1);
 }
 
 
@@ -862,11 +933,10 @@ header .navbar.nav-toggle {
         padding-top: 9rem;
     }
 
-
     .about .box-container .image {
-        width: 250px;
-        height: 250px;
+        padding: 1rem 2rem;
     }
+
 }
 
 @media(max-width:430px) {
@@ -882,8 +952,35 @@ header .navbar.nav-toggle {
 
     }
 
+    .about .box-container .image {
+        padding-top: 5rem;
+        /* margin-left: 10rem; */
+
+    }
+
+    .card {
+        margin-left: -5rem;
+        width: 250px;
+    }
+
     .about .box-container {
         padding: 1rem 4%;
     }
 
+}
+
+@media (max-width:340px) {
+
+    .card {
+        margin-left: -8.5rem;
+        width: 230px;
+    }
+}
+
+@media (max-width:292px) {
+
+    .card {
+        margin-left: -8.5rem;
+        width: 210px;
+    }
 }
