@@ -15,6 +15,17 @@ $(document).ready(function () {
         } else {
             $('.scroll-top').hide();
         }
+        $(window).scroll(function () {
+            // sticky navbar on scroll script
+            if (this.scrollY > 90) {
+                $('.header').addClass("active");
+            } else {
+                $('.header').removeClass("active");
+            }
+
+
+        });
+
 
         // scroll spy 
 
