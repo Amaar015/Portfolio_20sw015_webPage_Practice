@@ -1,9 +1,13 @@
 $(document).ready(function () {
-
     $('#menu').click(function () {
         $(this).toggleClass('fa-times');
-        $('.navbar').toggleClass('nav-toggle');
+        $('.item').toggleClass('nav-toggle');
     });
+
+    // $('#menu').click(function () {
+    //     $(this).toggleClass('fa-times');
+    //     $('.navbar').toggleClass('nav-toggle');
+    // });
 
     $(window).on('scroll load', function () {
 
@@ -47,3 +51,38 @@ $(document).ready(function () {
     });
 
 });
+
+let body = document.querySelector("body"),
+    lightBox = document.querySelector(".lightBox"),
+    img = document.querySelectorAll(".gImg"),
+    showImg = lightBox.querySelector(".showImg img"),
+    close = lightBox.querySelector(".close");
+
+for (let image of img) {
+    image.addEventListener("click", () => {
+        showImg.src = image.src;
+        lightBox.style.display = "block";
+        body.style.overflow = "hidden";
+        close.onclick = () => {
+            lightBox.style.display = "none";
+            body.style.overflow = "visible";
+        };
+    });
+}
+
+const text = document.querySelector(".sec-text");
+
+const textLoad = () => {
+    setTimeout(() => {
+        text.textContent = "Freelancer";
+    }, 0);
+    setTimeout(() => {
+        text.textContent = "Blogger";
+    }, 4000);
+    setTimeout(() => {
+        text.textContent = "YouTuber";
+    }, 8000); //1s = 1000 milliseconds
+}
+
+textLoad();
+setInterval(textLoad, 12000);
