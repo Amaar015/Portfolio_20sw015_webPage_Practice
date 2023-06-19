@@ -10,36 +10,48 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- general css link -->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mobile.css">
+    <!-- links for websies -->
 
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
-    <!-- Header -->
-    <header class="header">
+    <div id="to-top" title="back to top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
 
-        <a href="#" class="logo">
-            <div class="image">
-                <img src="images/logo.png" alt="">
+    <header>
+        <div class="rt-container">
+            <div class="col-rt-12">
+                <div class="Scriptcontent">
+
+                    <!-- Start Navigation HTML -->
+                    <div class="container">
+                        <div class="logo">
+                            <img src="./images/logo.png" alt="">
+                        </div>
+                        <a href="#home" class="item">Home</a>
+                        <a href="#services" class="item">Services</a>
+                        <a href="#about" class="item">About</a>
+                        <a href="#qualification" class="item">Qualification</a>
+                        <a href="#portfolio" class="item">Portfolio</a>
+                        <a href="#contact" class="item">Contact</a>
+                        <!-- <a href="" class="item">Help</a> -->
+                        <div id="menu" class="fas fa-bars"></div>
+
+                    </div>
+                    <!-- End Navigation HTM -->
+
+
+                </div>
             </div>
-            <div class="h1">Amaar<span>Raza</span></div>
-        </a>
-
-        <div id="menu" class="fas fa-bars"></div>
-
-        <nav class="navbar">
-            <ul>
-                <li><a class="active" href="#home">home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#qualification">Qualification</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-
+        </div>
     </header>
-    <!-- Home section -->
+
+    <!-- Home section start-->
     <section class="home" id="home">
         <div class="content">
             <h2>Hello... </h2>
@@ -86,19 +98,24 @@
             </ul>
         </nav>
     </section>
-    <!-- About section -->
+    <!-- Home section ends -->
+    <!-- About section start -->
     <section class="about" id="about">
+
         <div class="box-container">
             <div class="image">
                 <div class="card">
                     <div class="image-box">
-                        <img src="images/about.jpg" alt="">
+                        <img src="images/about.jpeg" alt="">
                     </div>
                 </div>
             </div>
             <div class="content">
                 <h3><span>About</span> Me</h3>
-                <h2 class="moving">I'm <span>Web Developer</span> </h2>
+                <div class="about-container">
+                    <span class="text first-text">I'm a</span>
+                    <span class="text sec-text"> Freelancer</span>
+                </div>
                 <p>Undergraduate Software engineer with a strong background in developing responsive
                     website designs and firm believer in the moblie-first approach.
                 </p>
@@ -107,14 +124,15 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                 <p>Lorem ipsum dolor sit amet consectetur.</p>
                 <p>Lorem ipsum dolor sit amet</p>
-                <div class="buttons">
+                <div class="buttons" style="margin-top: 3rem;">
                     <!-- <a href="#" class="btn">Browse Projects</a> -->
                     <a href="#" class="btn">Lets Talk</a>
                 </div>
             </div>
         </div>
     </section>
-    <!-- education section -->
+    <!-- About section end -->
+    <!-- education section start-->
     <section class="timeline" id="qualification">
         <h3>Education and Experience</h3>
         <ul>
@@ -151,7 +169,8 @@
         </ul>
 
     </section>
-    <!-- Skills sectin -->
+    <!-- education section send -->
+    <!-- Skills sectin start-->
     <section class="skill" id="skills">
         <div class="container-skill">
 
@@ -202,115 +221,370 @@
                 </div>
         </div>
     </section>
-    <!-- Portfolio section -->
+    <!-- skils section end -->
+    <!-- Portfolio section start -->
     <section class="portfolio" id="portfolio">
-        <h1 class="heading"> <span>My </span> Services</h1>
-        <div class="box-contain">
-            <div class="swiper mySwiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
+        <h4 class="tittle"><span>My</span> Portfolio</h1>
 
-                        <div class="box col">
-                            <img src="images/p-7.jpg" alt="">
-                            <h3>project 05</h3>
-                            <div class="icons">
-                                <a href="#"> <i class="fab fa-github-square"></i> </a>
-                                <a href="#"> <i class="fas fa-share"></i> </a>
-                                <a href="#"> <i class="fas fa-search"></i> </a>
+            <div class="lightBox">
+                <div class="lightBox_content">
+                    <i class="fas fa-times close"></i>
+                    <div class="logo_icons">
+                        <a href="#">
+                            <img class="logoImg" src="images/logo.png" alt="" />
+                            <div class="text_content">
+                                <span class="name">CodingLab</span>
+                                <span class="followers">50k followers</span>
                             </div>
+                        </a>
+                        <div class="icons">
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-arrow-down"></i>
                         </div>
-
                     </div>
-                    <div class="swiper-slide">
-                        <div class="box col">
-                            <img src="images/p-11.jpg" alt="">
-                            <h3>project 06</h3>
-                            <div class="icons">
-                                <a href="#"> <i class="fab fa-github-square"></i> </a>
-                                <a href="#"> <i class="fas fa-share"></i> </a>
-                                <a href="#"> <i class="fas fa-search"></i> </a>
-                            </div>
+                    <div class="showImg">
+                        <div class="image">
+                            <img src="images/p-1.2.jpg" alt="" />
                         </div>
-
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="box col">
-                            <img src="images/p-11.jpg" alt="">
-                            <h3>project 06</h3>
-                            <div class="icons">
-                                <a href="#"> <i class="fab fa-github-square"></i> </a>
-                                <a href="#"> <i class="fas fa-share"></i> </a>
-                                <a href="#"> <i class="fas fa-search"></i> </a>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="box col">
-                            <img src="images/p-8.jpg" alt="">
-                            <h3>project 04</h3>
-                            <div class="icons">
-                                <a href="#"> <i class="fab fa-github-square"></i> </a>
-                                <a href="#"> <i class="fas fa-share"></i> </a>
-                                <a href="#"> <i class="fas fa-search"></i> </a>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="swiper-slide">
-
-                        <div class="box col">
-                            <img src="images/p-4.jpg" alt="">
-                            <h3>project 03</h3>
-                            <div class="icons">
-                                <a href="#"> <i class="fab fa-github-square"></i> </a>
-                                <a href="#"> <i class="fas fa-share"></i> </a>
-                                <a href="#"> <i class="fas fa-search"></i> </a>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="box col">
-                            <img src="images/p-6.jpg" alt="">
-                            <h3>project 02</h3>
-                            <div class="icons">
-                                <a href="#"> <i class="fab fa-github-square"></i> </a>
-                                <a href="#"> <i class="fas fa-share"></i> </a>
-                                <a href="#"> <i class="fas fa-search"></i> </a>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="box ">
-                            <img src="images/p-1.2.jpg" alt="">
-                            <h3>project 01</h3>
-                            <div class="icons">
-                                <a href="#"> <i class="fab fa-github-square"></i> </a>
-                                <a href="#"> <i class="fas fa-share"></i> </a>
-                                <a href="#"> <i class="fas fa-search"></i> </a>
-                            </div>
-                        </div>
-
                     </div>
                 </div>
-                <div class="swiper-pagination"></div>
             </div>
 
-
+            <div class="image-gallery">
+                <div class="image-container">
+                    <div class="image-box">
+                        <img class="gImg" src="images/p-1.2.jpg" alt="" />
+                        <div class="logo_icons">
+                            <a href="#">
+                                <img class="logoImg" src="images/logo.png" alt="" />
+                                <div class="text_content">
+                                    <span class="name">CodingLab</span>
+                                    <span class="followers">50k followers</span>
+                                </div>
+                            </a>
+                            <div class="icons">
+                                <i class="fas fa-heart"></i>
+                                <i class="fas fa-arrow-down"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="image-box">
+                        <img class="gImg" src="images/p-10.jpg" alt="" />
+                        <div class="logo_icons">
+                            <a href="#">
+                                <img class="logoImg" src="images/logo.png" alt="" />
+                                <div class="text_content">
+                                    <span class="name">CodingLab</span>
+                                    <span class="followers">50k followers</span>
+                                </div>
+                            </a>
+                            <div class="icons">
+                                <i class="fas fa-heart"></i>
+                                <i class="fas fa-arrow-down"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="image-box">
+                        <img class="gImg" src="images/p-6.jpg" alt="" />
+                        <div class="logo_icons">
+                            <a href="#">
+                                <img class="logoImg" src="images/logo.png" alt="" />
+                                <div class="text_content">
+                                    <span class="name">CodingLab</span>
+                                    <span class="followers">50k followers</span>
+                                </div>
+                            </a>
+                            <div class="icons">
+                                <i class="fas fa-heart"></i>
+                                <i class="fas fa-arrow-down"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="image-box">
+                        <img class="gImg" src="images/p-5.jpg" alt="" />
+                        <div class="logo_icons">
+                            <a href="#">
+                                <img class="logoImg" src="images/logo.png" alt="" />
+                                <div class="text_content">
+                                    <span class="name">CodingLab</span>
+                                    <span class="followers">50k followers</span>
+                                </div>
+                            </a>
+                            <div class="icons">
+                                <i class="fas fa-heart"></i>
+                                <i class="fas fa-arrow-down"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="image-box">
+                        <img class="gImg" src="images/p-8.jpg" alt="" />
+                        <div class="logo_icons">
+                            <a href="#">
+                                <img class="logoImg" src="images/logo.png" alt="" />
+                                <div class="text_content">
+                                    <span class="name">CodingLab</span>
+                                    <span class="followers">50k followers</span>
+                                </div>
+                            </a>
+                            <div class="icons">
+                                <i class="fas fa-heart"></i>
+                                <i class="fas fa-arrow-down"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="image-box">
+                        <img class="gImg" src="images/p-9.jpg" alt="" />
+                        <div class="logo_icons">
+                            <a href="#">
+                                <img class="logoImg" src="images/logo.png" alt="" />
+                                <div class="text_content">
+                                    <span class="name">CodingLab</span>
+                                    <span class="followers">50k followers</span>
+                                </div>
+                            </a>
+                            <div class="icons">
+                                <i class="fas fa-heart"></i>
+                                <i class="fas fa-arrow-down"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="image-box">
+                        <img class="gImg" src="images/p-2.jpg" alt="" />
+                        <div class="logo_icons">
+                            <a href="#">
+                                <img class="logoImg" src="images/logo.png" alt="" />
+                                <div class="text_content">
+                                    <span class="name">CodingLab</span>
+                                    <span class="followers">50k followers</span>
+                                </div>
+                            </a>
+                            <div class="icons">
+                                <i class="fas fa-heart"></i>
+                                <i class="fas fa-arrow-down"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="image-box">
+                        <img class="gImg" src="images/p-1.jpg" alt="" />
+                        <div class="logo_icons">
+                            <a href="#">
+                                <img class="logoImg" src="images/logo.png" alt="" />
+                                <div class="text_content">
+                                    <span class="name">CodingLab</span>
+                                    <span class="followers">50k followers</span>
+                                </div>
+                            </a>
+                            <div class="icons">
+                                <i class="fas fa-heart"></i>
+                                <i class="fas fa-arrow-down"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="image-box">
+                        <img class="gImg" src="images/p-4.jpg" alt="" />
+                        <div class="logo_icons">
+                            <a href="#">
+                                <img class="logoImg" src="images/logo.png" alt="" />
+                                <div class="text_content">
+                                    <span class="name">CodingLab</span>
+                                    <span class="followers">50k followers</span>
+                                </div>
+                            </a>
+                            <div class="icons">
+                                <i class="fas fa-heart"></i>
+                                <i class="fas fa-arrow-down"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="image-box">
+                        <img class="gImg" src="images/p-11.jpg" alt="" />
+                        <div class="logo_icons">
+                            <a href="#">
+                                <img class="logoImg" src="images/logo.png" alt="" />
+                                <div class="text_content">
+                                    <span class="name">CodingLab</span>
+                                    <span class="followers">50k followers</span>
+                                </div>
+                            </a>
+                            <div class="icons">
+                                <i class="fas fa-heart"></i>
+                                <i class="fas fa-arrow-down"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="image-box">
+                        <img class="gImg" src="images/p-10.jpg" alt="" />
+                        <div class="logo_icons">
+                            <a href="#">
+                                <img class="logoImg" src="images/logo.png" alt="" />
+                                <div class="text_content">
+                                    <span class="name">CodingLab</span>
+                                    <span class="followers">50k followers</span>
+                                </div>
+                            </a>
+                            <div class="icons">
+                                <i class="fas fa-heart"></i>
+                                <i class="fas fa-arrow-down"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="image-box">
+                        <img class="gImg" src="images/p-4.jpg" alt="" />
+                        <div class="logo_icons">
+                            <a href="#">
+                                <img class="logoImg" src="images/logo.png" alt="" />
+                                <div class="text_content">
+                                    <span class="name">CodingLab</span>
+                                    <span class="followers">50k followers</span>
+                                </div>
+                            </a>
+                            <div class="icons">
+                                <i class="fas fa-heart"></i>
+                                <i class="fas fa-arrow-down"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="image-box">
+                        <img class="gImg" src="images/p-7.jpg" alt="" />
+                        <div class="logo_icons">
+                            <a href="#">
+                                <img class="logoImg" src="images/logo.png" alt="" />
+                                <div class="text_content">
+                                    <span class="name">CodingLab</span>
+                                    <span class="followers">50k followers</span>
+                                </div>
+                            </a>
+                            <div class="icons">
+                                <i class="fas fa-heart"></i>
+                                <i class="fas fa-arrow-down"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="image-box">
+                        <img class="gImg" src="images/p-11.jpg" alt="" />
+                        <div class="logo_icons">
+                            <a href="#">
+                                <img class="logoImg" src="images/logo.png" alt="" />
+                                <div class="text_content">
+                                    <span class="name">CodingLab</span>
+                                    <span class="followers">50k followers</span>
+                                </div>
+                            </a>
+                            <div class="icons">
+                                <i class="fas fa-heart"></i>
+                                <i class="fas fa-arrow-down"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="image-box">
+                        <img class="gImg" src="images/p-4.jpg" alt="" />
+                        <div class="logo_icons">
+                            <a href="#">
+                                <img class="logoImg" src="images/logo.png" alt="" />
+                                <div class="text_content">
+                                    <span class="name">CodingLab</span>
+                                    <span class="followers">50k followers</span>
+                                </div>
+                            </a>
+                            <div class="icons">
+                                <i class="fas fa-heart"></i>
+                                <i class="fas fa-arrow-down"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <!-- porfolio section end -->
+    <!-- contact section  start-->
+    <section class="contact" id="contact">
+        <div class="contact-cotainer">
+            <div class="link-box">
+                <h2>Let's discuss <br> on something <span>cool</span> <br>together</h2>
+                <div class="box">
+                    <div class="contact-box">
+                        <i class="fas fa-envelope"></i>
+                        <p> hassnain015raza@gmail.com</p>
+                    </div>
+                    <div class="contact-box">
+                        <i class="fas fa-phone-alt"></i>
+                        <p>+92304-3042589</p>
+                    </div>
+                    <div class="contact-box">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Mehbob Town Tando Jam Hyderabd</p>
+                    </div>
+                </div>
+                <div class="contact-links">
+                    <a href="#"> <i class="fa-brands fa-square-twitter"></i></a>
+                    <a href="#"> <i class="fa-brands fa-square-github"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+                </div>
+            </div>
+            <div class="contact-form">
+                <h4 class="tittle">Contact Us</h1>
+                    <form action="#">
+                        <input type="text" placeholder="Enter your Name" name="name">
+                        <input type="email" placeholder="Enter your Email address" name="email">
+                        <input type="text" placeholder="Enter your purpose" name="purpose">
+                        <textarea name="message" id="message" placeholder="Enter Message" cols="30" rows="8"></textarea>
+                        <input type="submit" name="submit" class="btn">
+                    </form>
+            </div>
 
         </div>
-        <!-- <button class="btn1">Load More</button> -->
-    </section>
-    <!-- contact section -->
-    <section class="contact" id="contact">
-        <h1>Hello home</h1>
-    </section>
 
+    </section>
+    <!-- contact section end -->
+    <!-- footer section start -->
+    <footer class="footer">
+        <div class="footer-about">
+            <h1>Amaar <span>Hassnain</span></h1>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#service">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#qualification">Qualification</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-contact">
+            <div class="box">
+                <div class="contact-box">
+                    <i class="fas fa-envelope"></i>
+                    <p> hassnain015raza@gmail.com</p>
+                </div>
+                <div class="contact-box">
+                    <i class="fas fa-phone-alt"></i>
+                    <p>+92304-3042589</p>
+                </div>
+                <div class="contact-box">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>Mehbob Town Tando Jam Hyderabd</p>
+                </div>
+            </div>
+        </div>
+        <div class="social-icons">
+            <h2>Get in touch</h2>
+            <ul>
+                <li><a href="#"> <i class="fa-brands fa-square-twitter"></i></a></li>
+                <li><a href="#"> <i class="fa-brands fa-square-github"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                <li><a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+                <li><a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+                </li>
+            </ul>
+        </div>
+
+
+    </footer>
+    <!-- footer section ends here -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-
+    <!-- <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script> -->
     <script src="script.js"></script>
 
     <!-- swiper js -->
@@ -339,6 +613,25 @@
                     spaceBetween: 20,
                 },
             },
+        });
+
+        $(function () {
+            $(window).scroll(function () {
+                if ($(this).scrollTop() - 200 > 0) {
+                    $('#to-top').stop().slideDown('fast'); // show the button
+                } else {
+                    $('#to-top').stop().slideUp('fast'); // hide the button
+                }
+            });
+        });
+        $(function () {
+            // previous detection logic
+
+            $("#to-top").on("click", function () {
+                $("html, body").animate({
+                    scrollTop: 0
+                }, 200);
+            });
         });
     </script>
 </body>
