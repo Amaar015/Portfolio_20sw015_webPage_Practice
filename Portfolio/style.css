@@ -17,7 +17,7 @@
     border: none;
     text-decoration: none;
     transition: all .3s cubic-bezier(.16, .8, .62, 1.52);
-    text-transform: capitalize;
+    text-transform: none;
 }
 
 *::selection {
@@ -35,14 +35,92 @@ html::-webkit-scrollbar {
     display: none;
 }
 
+.loader-bg {
+    position: fixed;
+    z-index: 9999;
+    background: var(--dark-blue);
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+
+}
+
+.disapear {
+    animation: vanish 3s forwards;
+}
+
+@keyframes vanish {
+    100% {
+        visibility: hidden;
+    }
+}
+
+.loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    height: 150px;
+    width: 150px;
+    border: 1px solid transparent;
+    box-shadow: 0 0 0 2px rgb(25, 116, 253);
+    border-radius: 50%;
+}
+
+.waves {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: rgb(30, 146, 255);
+    box-shadow: inset 0 0 50px rgb(0, 0, 0, .3);
+}
+
+.waves::before,
+.waves::after {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -75%);
+    background: #000;
+}
+
+.waves::before {
+    border-radius: 45%;
+    background: rgb(248, 248, 248);
+    animation: wave91234 5s linear infinite;
+}
+
+.waves::after {
+    border-radius: 40%;
+    background: rgb(255, 255, 255, .5);
+    animation: wave91234 10s linear infinite;
+}
+
+@keyframes wave91234 {
+    0% {
+        transform: translate(-50%, -75%) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(-50%, -75%) rotate(360deg);
+    }
+}
+
+/* loaders end */
 
 body {
     background: var(--black);
     font-family: 'League Spartan', sans-serif;
+
 }
 
 section {
-    min-height: 100vh;
+    min-height: 100%;
     padding: 0 7%;
     padding-top: 4rem;
     width: 100%;
@@ -91,6 +169,7 @@ section {
     text-align: center;
 }
 
+
 .home .content h2 {
     font-size: 3.5rem;
     color: var(--dark-blue);
@@ -98,6 +177,7 @@ section {
     padding-bottom: 1rem;
     letter-spacing: 2px;
 }
+
 
 .home .content h1 {
     font-size: 5rem;
@@ -114,6 +194,30 @@ section {
     padding: 1rem 25rem;
     letter-spacing: 0.5px;
     line-height: 2.2rem;
+}
+
+/* watsapp icon */
+.top-btn {
+    display: flex;
+    gap: 1rem;
+    position: fixed;
+    position: fixed;
+    right: 12px;
+    bottom: 20px;
+
+    z-index: 1;
+
+}
+
+.watsapp {
+    z-index: 1;
+    width: 5rem;
+    height: 5rem;
+}
+
+.watsapp img {
+    width: 100%;
+    height: 100%;
 }
 
 /* download cv button */
@@ -184,11 +288,11 @@ section {
 
 .home .box-container .box {
     height: 22rem;
-    width: 27rem;
+    width: 28rem;
     background: var(--white);
     text-align: center;
     border: 1rem;
-    padding: 1rem 0.5rem;
+    /* padding: 0.5rem 0.5rem; */
     box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
     margin: 2rem;
     /* cursor: pointer; */
@@ -203,8 +307,8 @@ section {
     border-radius: 50%;
     color: var(--white);
     background: var(--dark-blue);
-    font-size: 3rem;
-    margin: 2rem 0;
+    font-size: 2.5rem;
+    margin: 1rem 0;
     transition: 0.2s;
 }
 
@@ -226,7 +330,8 @@ section {
 
 .home .box-container .box p {
     font-size: 1.8rem;
-    padding: 1rem 2rem;
+    padding: 1rem 0.2rem;
+    text-transform: none;
     color: #555;
 }
 
@@ -237,7 +342,7 @@ section {
     left: 50%;
     transform: translateX(-50%);
     border: 70vh solid var(--blue);
-    width: 120%;
+    width: 100%;
     border-radius: 50%;
     z-index: -1;
 }
@@ -291,7 +396,6 @@ section {
 .social .social-ul li i {
     margin-left: 10px;
     color: var(--blue);
-    /* margin-top: 10px; */
     background: #fff;
     padding: 8px;
     border-radius: 50%;
@@ -304,10 +408,12 @@ section {
 /* About section code */
 .about {
     height: 100% !important;
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
     background: var(--white);
+    width: 100%;
+
 }
 
 
@@ -318,13 +424,14 @@ section {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    /* width: 100%; */
     gap: 3rem;
     padding: 8rem 7%;
 }
 
 .about .box-container .image {
     flex: 1 1 30rem;
-    padding: 2rem 4rem;
+    /* padding: 2rem 4rem; */
 
 
 }
@@ -398,6 +505,9 @@ section {
 
 .about .box-container .content {
     flex: 1 1 30rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .about .box-container .content h3 {
@@ -416,7 +526,7 @@ section {
 
 /* moving text animation */
 .about-container {
-    width: 400px;
+    width: 100%;
     overflow: hidden;
     padding-bottom: 1rem;
 }
@@ -424,7 +534,7 @@ section {
 .about-container .text {
     position: relative;
     color: var(--white);
-    font-size: 4rem !important;
+    font-size: 3rem !important;
     font-weight: 600;
 }
 
@@ -465,6 +575,9 @@ section {
     color: var(--white);
     font-weight: 400;
     line-height: 2.2rem;
+    text-transform: none;
+    letter-spacing: 1px;
+    width: 95%;
 }
 
 
@@ -487,11 +600,12 @@ section {
     display: grid;
     align-content: center;
     gap: 2rem;
-    padding: 2rem;
-    font-family: "Poppins", sans-serif;
+    padding: 2rem 5%;
+    /* font-family: "Poppins", sans-serif; */
     color: var(--color);
     background: var(--white);
     margin-top: 4rem;
+
 }
 
 
@@ -641,11 +755,7 @@ section {
 .skill {
     background: var(--bg-home);
     margin-top: 4rem;
-}
-
-.container-skill {
-    max-width: 1170px;
-    margin: auto;
+    width: 100% !important;
 }
 
 .tittle {
@@ -658,6 +768,10 @@ section {
     color: var(--gray)
 }
 
+.container-skill {
+    width: 100%;
+    padding: 2rem 10%;
+}
 
 .skill .content-skill {
     width: 100%;
@@ -748,7 +862,7 @@ section {
 
 .portfolio {
     position: relative;
-    min-height: 100vh;
+    height: 100% !important;
     width: 100%;
     padding: 2rem 4%;
     margin-top: 4rem;
@@ -816,14 +930,10 @@ section .logo_icons .text_content {
     flex-direction: column;
     margin-left: 10px;
     color: #333;
-    font-size: 16px;
-    font-weight: 500;
+    font-size: 2.5rem;
+    font-weight: 600;
 }
 
-.logo_icons .text_content .followers {
-    font-size: 13px;
-    margin-top: -5px;
-}
 
 section .logo_icons .icons i {
     height: 35px;
@@ -831,7 +941,7 @@ section .logo_icons .icons i {
     background: #ccc;
     text-align: center;
     line-height: 35px;
-    font-size: 16px;
+    font-size: 2rem;
     color: #fff;
     border-radius: 4px;
     margin: 0 5px;
@@ -841,7 +951,7 @@ section .logo_icons .icons i {
 
 .lightBox .logo_icons .icons i:hover {
     color: #fff;
-    background: #7d2ae8;
+    background: var(--blue);
 }
 
 section .lightBox .showImg {
@@ -864,7 +974,7 @@ section .lightBox .showImg {
 
 section .image-gallery {
     max-width: 1300px;
-    min-height: 100vh;
+    height: 100%;
     width: 100%;
     background: #fff;
     margin: auto;
@@ -881,21 +991,28 @@ section .image-gallery {
 }
 
 .image-gallery .image-container {
-    columns: 3;
-    margin-top: 20px;
-    gap: 15px;
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+
 }
+
 
 .image-container img {
     width: 100%;
+    height: 100%;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
 .image-container .image-box {
+    flex: 1 1 30rem;
     position: relative;
     cursor: pointer;
     margin: 10px 0;
     border: 4px solid black !important;
+    display: none;
 }
 
 .image-box .logo_icons {
@@ -927,14 +1044,9 @@ section .image-gallery {
 
 section .image-gallery .logo_icons .text_content {
     color: #fff;
-    font-size: 14px
+    font-size: 2rem;
 }
 
-section .image-gallery .text_content .followers {
-    font-size: 12px;
-    font-weight: 400;
-    margin-top: -4px;
-}
 
 
 /* Contact form */
@@ -1117,9 +1229,6 @@ form .btn:hover {
 /* toup button  */
 
 #to-top {
-    position: fixed;
-    right: 12px;
-    bottom: 20px;
     cursor: pointer;
     padding: 10px 10px;
     background: var(--blue);

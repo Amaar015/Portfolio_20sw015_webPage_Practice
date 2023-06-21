@@ -50,7 +50,25 @@ $(document).ready(function () {
 
     });
 
+
+
+
 });
+$(function () {
+    // alert('hello ')
+    $(".image-box").slice(0, 4).show();
+    $("#load-more").on('click', function (e) {
+        e.preventDefault();
+        $(".image-box:hidden").slice(0, 3).slideDown();
+        if ($("div:hidden").length == 0) {
+            $("#load").fadeOut('slow');
+        }
+        // $('html,body').animate({
+        //     scrollTop: $(this).offset().top
+        // }, 1000);
+    });
+});
+
 
 let body = document.querySelector("body"),
     lightBox = document.querySelector(".lightBox"),
@@ -74,15 +92,37 @@ const text = document.querySelector(".sec-text");
 
 const textLoad = () => {
     setTimeout(() => {
-        text.textContent = "Freelancer";
+        text.textContent = "Frontend developer";
     }, 0);
     setTimeout(() => {
-        text.textContent = "Blogger";
+        text.textContent = "MERN developer";
     }, 4000);
     setTimeout(() => {
-        text.textContent = "YouTuber";
+        text.textContent = "ReactJs developer";
     }, 8000); //1s = 1000 milliseconds
 }
 
 textLoad();
 setInterval(textLoad, 12000);
+
+
+// function sendMail() {
+//     let name = document.getElementById("name").value;
+//     let email = document.getElementById("email").value;
+//     let purpose = document.getElementById("purpose").value;
+//     let message = document.getElementById("message").value;
+
+
+
+//     alert(`hello ${name}`)
+//     // const serviceID = "service_59y93za";
+//     // const templateID = "template_o95pfn7";
+//     emailjs.send("service_59y93za", "template_o95pfn7", {
+//         from_name: "hello",
+//         email_id: "razaamaar@gmail.com",
+//         message: "hello i am amaar raza",
+//     });
+
+
+// }
+
