@@ -30,7 +30,7 @@
   }
 }
 
-@media(max-width:830px){
+@media (max-width: 830px) {
   .about {
     grid-template-columns: 1fr;
   }
@@ -38,10 +38,8 @@
     text-align: center;
     margin-bottom: 30px;
   }
-
 }
 @media (max-width: 690px) {
-  
   .social {
     top: 45rem;
   }
@@ -63,7 +61,6 @@
   html {
     font-size: 50%;
   }
-
   section {
     padding: 0 3%;
     padding-top: 9rem;
@@ -72,6 +69,9 @@
   .about .box-container .image {
     padding: 1rem 2rem;
   }
+  .skills-container {
+    padding: 30px 4%;
+  }
 }
 
 @media (max-width: 325px) {
@@ -79,6 +79,9 @@
     width: 98%;
     height: 2.3rem;
     display: none;
+  }
+  .row .sub-title h2 {
+    font-size: 20px;
   }
 }
 
